@@ -1,0 +1,81 @@
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+
+@font-face {
+    font-family: 'digital';
+    src: url('./fonts/digital-7/digital-7.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#app-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c2c2d6;
+}
+
+#container {
+    width: 380px;
+    background-color: black;
+    padding: 5px;
+    display: grid;
+    grid-template-areas:
+        "formula-display formula-display formula-display formula-display"
+        "display display display display"
+        "clear clear divide multiply"
+        "seven eight nine subtract"
+        "four five six add"
+        "one two three equals"
+        "zero zero decimal equals";
+    grid-template-rows: 35px 45px repeat(5, 65px);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+}
+
+.display {
+    font-family: 'digital', sans-serif;
+    background-color: black;
+    text-align: end;
+}
+
+#formula-display {
+    color: orange;
+    font-size: 25px;
+}
+
+#display {
+    color: white;
+    font-size: 35px;
+}
+
+.button {
+    color: white;
+    border: none;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 20px;
+}
+
+.button:hover {
+    border: 1px solid grey;
+    color: black;
+}
+
+.number,
+#decimal {
+    background-color: #4d4d4d;
+}
+
+.operator {
+    background-color: rgb(102, 102, 102);
+}
+
+#clear {
+    background-color: rgb(172, 57, 57);
+}
+
+#equals {
+    background-color: rgb(0, 68, 102);
+}
